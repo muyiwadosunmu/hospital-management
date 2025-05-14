@@ -1,0 +1,89 @@
+{{define "subject"}}
+Welcome to GoSocial!
+{{end}}
+
+{{define "plainBody"}}
+Hi {{.firstName}}, {{.lastName}}
+
+Thanks for signing up for a Hospital Platform account. We're excited to have you on board!
+
+For future reference, your user ID number is: {{.userID}}.
+
+
+Thanks,  
+The io Team
+{{end}}
+
+{{define "htmlBody"}}
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      width: 100%;
+      padding: 20px;
+      background-color: #ffffff;
+    }
+    h1 {
+      color: #4CAF50;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .code-block {
+      background-color: #f7f7f7;
+      border-radius: 4px;
+      padding: 10px;
+      font-family: monospace;
+      color: #333;
+      word-wrap: break-word;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .footer {
+      font-size: 14px;
+      color: #777;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer a {
+      color: #4CAF50;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hi {{.firstName}}, {{.lastName}}</h1>
+    <p>Thanks for signing up for a Our Hospital Platform account. We're excited to have you on board!</p>
+    <p>For future reference, your user ID number is: <strong>{{.userID}}</strong>.</p>
+
+      </code></pre>
+    </div>
+
+
+
+    <p>Thanks,</p>
+    <p>The io Team</p>
+
+  </div>
+</body>
+</html>
+{{end}}
