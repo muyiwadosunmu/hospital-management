@@ -3,11 +3,9 @@ package main
 import (
 	"context"
 	"database/sql"
-	"log"
 	"os"
 	"time"
 
-	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 	"github.com/muyiwadosunmu/hospital-management/internal/auth"
 	store "github.com/muyiwadosunmu/hospital-management/internal/data"
@@ -19,10 +17,6 @@ import (
 const Version = "1.0.0"
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Error loading .env file")
-	}
 
 	cfg := config{
 		port:   env.GetInt("PORT", 3000),
